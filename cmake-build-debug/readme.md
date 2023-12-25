@@ -11,7 +11,7 @@ Output: 5 - 3
 
 ## Bài tập 2b: Sắp xếp mảng theo thứ tự tăng dần.
 
-Input: [2,9,6,6,7,8]
+Input:  [2,9,6,6,7,8]
 Output: [2,6,6,7,8,9]
 
 ## Bài tập 3: In mảng theo thứ tự nghịch đảo:
@@ -22,14 +22,14 @@ Output: 9 7 8 9 2
 
 ## Bài tập 4: Trong phần này chúng ta sẽ thực hiện tìm phần tử lớn thứ 2 trong mảng
 
-Input: 3 4 5 4 5 -> 5 5 4 4 3
+Input: 3 4 5 4 5 --> 5 5 4 4 3
 Output: 4
 
 ## Bài tập 5: Tìm số lần xuất hiện của một giá trị trong mảng:
 
 Yêu cầu người dùng nhập một mảng số nguyên và một giá trị cần tìm. Sau đó, tìm và in ra số lần mà giá trị đó xuất hiện
 trong mảng.
-Input: arr = 3 4 5 3 -> X = 3
+Input:  arr = 3 4 5 3 -> X = 3
 Output: 2
 
 ## Bài tập 6: Chèn 1 phần tử vào trong mảng
@@ -52,7 +52,7 @@ arr[3] = [3,4,5,6,4,5,6]
 
 ## Bài tập 9: Sắp xếp mảng theo thứ tự tăng dần.
 
-Input: [2,9,6,6,7,8]
+Input:  [2,9,6,6,7,8]
 Output: [2,6,6,7,8,9]
 
 ## Bài tập 10: Cho mảng số nguyên nums và một số nguyên target. Hãy tìm hai phần tử mà tổng của chúng chính bằng target, trả về kết quả là 2 số của chúng trong mảng nums.
@@ -73,8 +73,3 @@ Output: [3,3]
 Hãy kiểm tra xem dãy a có phải là dãy đơn điệu hay không, trả về "YES" nếu có, "No" nếu không.
 Input: 3 4 5 6 7
 Output: Yes
-
-## Bài tập 11: Nhập và một số nguyên dương n, arr. Đếm trong mảng có tất cả bao nhiêu số nguyên tố?
-
-Input: n = 5 -> [3, 4, 5, 6, 7]
-Output: 3 (3 , 5 ,7 ) là số nguyên tố

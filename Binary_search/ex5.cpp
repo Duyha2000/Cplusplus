@@ -1,39 +1,37 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 using ll = long long;
 
 int main() {
-    // B1.1: Đọc số lượng máy móc và số sản phẩm cần tìm
-    int n, k;
-    cin >> n >> k;  // 3 - 9
+    // Khai báo biến
+    ll count, mid, sum;
 
-    // B1.2: Khởi tạo vector chứa thời gian sản xuất của từng máy móc
-    vector<int> machineTimes(n);
-    for (int i = 0; i < n; i++) cin >> machineTimes[i]; // 3 2 7
+    // Nhập tổng số đồng xu
+    cin >> count;
 
-    // B2: Khởi tạo biến left và right cho Binary Search
-    ll left = 0, right = 1e18;
+    // Khởi tạo con trỏ left và right cho thuật toán tìm kiếm nhị phân
+    ll left = 0, right = count; // 6
 
-    // B3: Binary Search
+    // Vòng lặp tìm kiếm nhị phân
     while (left <= right) {
-        // B3.1: Tính giữa của left và right
-        ll mid = (right + left) / 2;
 
-        // B3.2: Tính tổng số sản phẩm có thể sản xuất trong thời gian mid
-        ll totalProducts = 0;
-        for (int i = 0; i < n; i++) totalProducts += mid / machineTimes[i];
+        // Tính điểm giữa
+        mid = (left + right) / 2;
 
-        // B3.3: Nếu tổng sản phẩm >= số sản phẩm cần tìm, thu hẹp khoảng giữa bằng cách di chuyển right
-        if (totalProducts >= k) right = mid - 1;
-            // Ngược lại, nếu tổng sản phẩm < số sản phẩm cần tìm, thu hẹp khoảng giữa bằng cách di chuyển left
-        else left = mid + 1;
+        // Tính tổng số đồng xu đến dòng hiện tại bằng công thức (n * (n + 1)) / 2
+        sum = mid * (mid + 1) / 2;
+
+        // Kiểm tra xem tổng có khớp với tổng đầu vào không, nếu bằng, in ra dòng hiện tại (mid) và thoát
+        if (sum == count) cout << mid << endl;
+            // Nếu tổng nhỏ hơn đầu vào, cập nhật con trỏ left
+        else if (sum < count) left = mid + 1;
+            // Nếu tổng lớn hơn đầu vào, cập nhật con trỏ right
+        else right = mid - 1;
     }
 
-    // B4: In ra thời gian nhỏ nhất để sản xuất đủ số sản phẩm cần tìm
-    cout << left << endl;
-    // Nhỏ nhất : left
-    // Lớn nhất: right
+    // Xuất kết quả (dòng cuối cùng hợp lệ trước khi tổng vượt quá đầu vào)
+    cout << right << endl;
+
     return 0;
 }

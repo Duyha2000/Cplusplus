@@ -90,44 +90,14 @@ Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 Ví dụ 2:
 
-Input: nums = [3,2,4], target = 6
+Input: nums = [2,3,4], target = 6
 Output: [1,2]
 Ví dụ 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
 
-## Bài tập 5: Có một phân xưởng gồm n máy (n ≤ 10 ), máy thứ i cần chính xác a  ngày (0 < a ≤ 10 ) để hoàn thành 1 sản phẩm như nhau. Hãy tính thời gian ít nhất để có thể hoàn thành tối thiểu k sản phẩm (0< k≤ 10 ).
-
-Input:
-3 9
-3 2 7
-Output:
-10
-Các bước làm:
-
-1. Đọc dữ liệu đầu vào:
-
-- Đọc số lượng máy móc numberOfMachines và số lượng sản phẩm cần hoàn thành targetProducts.
-- Đọc thời gian cần cho mỗi máy để hoàn thành một sản phẩm.
-
-2. Xác định khoảng thời gian tìm kiếm:
-
-- Khởi tạo biến left là 0 và right là giới hạn trên khả thi (thể hiện thời gian làm 1 máy sẽ nằm trong khoảng left -
-  right).
-
-3. Thực hiện Binary Search:
-
-- Thực hiện vòng lặp Binary Search trên khoảng thời gian left đến right.
-  Tại mỗi bước, tính tổng số sản phẩm có thể được sản xuất trong khoảng thời gian giữa left và right bằng cách sử dụng
-  thời gian cần cho mỗi máy.
-- So sánh tổng số sản phẩm với số lượng sản phẩm cần hoàn thành (k) để điều chỉnh khoảng tìm kiếm.
-
-4. In kết quả:
-
-- Kết quả sẽ là giá trị left cuối cùng sau khi thoát khỏi vòng lặp Binary Search.
-
-## Bài tập 6: Arranging Coins (https://leetcode.com/problems/arranging-coins/description/)
+## Bài tập 5: Arranging Coins (https://leetcode.com/problems/arranging-coins/description/)
 
 Bạn có n đồng xu và muốn sử dụng chúng để xây dựng một bậc thang. Mỗi hàng của bậc thang có số lượng đồng xu tăng dần từ
 1 đến hàng thứ k, với k là số hàng. Hàng cuối cùng của bậc thang có thể không đầy đủ.

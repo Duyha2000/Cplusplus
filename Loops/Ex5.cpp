@@ -5,7 +5,8 @@ using namespace std;
 
 int main() {
     int choice;
-    while (true) {
+    bool isFlag = true;
+    while (isFlag) {
         // Hiển thị menu chức năng
         cout << "Menu chuc nang:" << endl;
         cout << "1. Kiểm tra số chẵn hoặc lẻ" << endl;
@@ -38,11 +39,8 @@ int main() {
                             break;
                         }
                     }
-                    if (isPrime) {
-                        cout << "La so nguyen to" << endl;
-                    } else {
-                        cout << "Khong phai so nguyen to" << endl;
-                    }
+                    if (isPrime) cout << "La so nguyen to" << endl;
+                    else cout << "Khong phai so nguyen to" << endl;
                 }
                 break;
             case 3:
@@ -55,8 +53,8 @@ int main() {
                     cout << "Khong chia het cho 3" << endl;
                 break;
             case 4:
-                cout << "Chuong trinh ket thuc. Tam biet!" << endl;
-                return 0;
+                isFlag = false;
+                break;
             default:
                 cout << "Lua chon khong hop le. Vui long chon lai." << endl;
                 break;

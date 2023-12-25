@@ -4,37 +4,36 @@
 
 using namespace std;
 
+// Hàm tìm kiếm nhị phân và trả về chỉ số của phần tử đầu tiên có giá trị bằng x
+int binary_search(vector<int> nums, int x) {
+    int left = 0, right = nums.size() - 1, index;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == x) {
+            index = mid;
+            right = mid - 1;
+        } else if (nums[mid] < x) left = mid + 1;
+        else right = mid - 1;
+    }
+    return index;
+}
+
 int main() {
-    // Nhập kích thước của mảng
-
-    int size;
-    cin >> size;
-    // Khởi tạo mảng và nhập giá trị từng phần tử của mảng
-
+    int size, target;
+    cin >> size >> target;
     vector<int> nums(size);
     for (int i = 0; i < size; i++) cin >> nums[i];
-
-    // Nhập giá trị target
-    int target;
-    cin >> target;
-
-    int result[2];
-
-    // Sắp xếp mảng để sử dụng binary_search
+    vector<int> result(2);
     sort(nums.begin(), nums.end());
 
-    // Duyệt qua từng phần tử của mảng
     for (int i = 0; i < size; i++) {
-        int complement = target - nums[i];
-        // Sử dụng binary_search để kiểm tra xem complement có tồn tại trong mảng không
-        if (binary_search(nums.begin(), nums.end(), complement)) {
-            result[0] = i;
-            result[1] = lower_bound(nums.begin(), nums.end(), complement) - nums.begin();
-            break;
-        }
+        result[0] = i;
+        result[1] = binary_search(nums, target - nums[i]);
     }
 
     // In ra kết quả
+    sort(result.begin(), result.end());
     cout << result[0] << " " << result[1] << endl;
 
     return 0;
