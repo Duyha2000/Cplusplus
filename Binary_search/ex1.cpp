@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool binary_search(const vector<int>& arr, int target) {
+bool binary_search(const vector<int> &arr, int target) {
     int left = 0, right = arr.size() - 1;
 
     while (left <= right) {

@@ -136,9 +136,15 @@ lượng phần tử trong mảng.(1≤n≤100000).
 Dòng thứ 2 bao gồm n phần tử trong mảng. (-1018≤ai≤1018).
 Output: In ra số xuất hiện nhiều nhất cùng số lần xuất hiện của nó.
 Ví dụ:
-Input ------ Output
-1 --------------1
+Input ------  Output
+1 -------------- 1
 10
 1 1 2 2 2 1 4 7 8 19
 
+
+## Bài 12: Chẵn lẻ
+
+## Bài 13: Robot
+
+## Bài 14: Chuyển đổi
 https://www.scribd.com/document/654201926/Set-Map?irclickid=VyxRMQyUsxyPTr0yghymZQYOUkFVl53QOyxS2s0&irpid=123201&utm_source=impact&utm_medium=cpc&utm_campaign=Scribd_affiliate_pdm_acquisition_TakeAds%20Networks&sharedid=244104&irgwc=1
